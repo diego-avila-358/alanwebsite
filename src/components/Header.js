@@ -1,7 +1,7 @@
 //Implementation of the header component that can be reused in other components
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoImage from '../assets/darklogo.jpeg';
+//import logoImage from '../assets/darklogo.jpeg';
 import '../components/header.css';
 import 'bootstrap'; // Import Bootstrap CSS
 

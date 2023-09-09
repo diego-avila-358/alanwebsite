@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import '../components/home.css';
 import 'bootstrap'; // Import Bootstrap CSS
-import Header from "../components/Header";
+//import Header from "../components/Header";
 import logoImage from '../assets/darklogo.jpeg';
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
         <div className='faded-line'></div>
 
         <div className='intro-text'>
-          <h1 className='intro-header'></h1>
+          <h1 className='intro-header'>Welcome to The Dream Barber Lounge</h1>
         </div>
 
       </div>
