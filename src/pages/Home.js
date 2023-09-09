@@ -8,7 +8,6 @@ import logoImage from '../assets/darklogo.jpeg';
 function Home() {
   return (
     <div className='home-page'>
-      <Header />
       <div className="bg-dark text-white position-relative overflow-hidden dark-filter-image">
           <img src={logoImage} alt="Background" className="header-background img-fluid" />
           <div className="dark-overlay"></div>
