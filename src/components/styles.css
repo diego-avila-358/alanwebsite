@@ -1,0 +1,72 @@
+:root {
+    --header-font-size: 20px; /* Max header font size */
+    --regular-font-size: 15px; /* Max regular font size */
+}
+
+/*Screens in between medium and full size*/
+@media screen and (min-width: 1110px) {
+    :root {
+        --header-font-size: 20px; /* Max header font size */
+        --regular-font-size: 15px; /* Max regular font size */
+    }
+}
+
+@font-face {
+    font-family: 'Bisdak';
+    src: url('../assets/Fonts/Bisdak.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    min-width: 960px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(204, 178, 135);
+    z-index: 100;
+    position: relative;
+}
+
+.navbar {
+    background-color: transparent;
+    width: 100%;
+}
+
+.header-container{
+    width: 100%;
+}
+
+.navbar .navbar-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-nav .nav-item {
+    margin: 0px 20px;
+}
+
+.navbar-nav .social{
+    margin: 20px 20px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 20px;
+    font-family: 'Bisdak';
+}
+
+.nav-item .nav-link:hover {
+    color: rgb(204, 178, 135) ;
+}
+
+
