@@ -294,7 +294,7 @@ function Home() {
               <p
                 className='col'
                 style={{ marginLeft: 0, paddingLeft: 0, paddingRight: '20px' }}>
-                40
+                45
               </p>
             </div>
           </div>
