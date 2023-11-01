@@ -13,9 +13,9 @@ function Home() {
     });
   };
   useEffect(() => {
-    window.addEventListener('scroll', handlePlay);
+    window.addEventListener('click', handlePlay);
     return () => {
-      window.removeEventListener('scroll', handlePlay);
+      window.removeEventListener('click', handlePlay);
     };
   }, []);
   
