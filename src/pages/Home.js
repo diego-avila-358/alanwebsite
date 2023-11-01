@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import 'bootstrap'; // Import Bootstrap CSS
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -36,6 +36,7 @@ function Home() {
           autoPlay
           loop
           muted={true}
+          controls={false}
           className='header-background'
           style={{
             width: '100%',
