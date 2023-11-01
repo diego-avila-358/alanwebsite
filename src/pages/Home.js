@@ -13,19 +13,11 @@ function Home() {
     });
   };
   useEffect(() => {
-    const vid = document.getElementById('backgroundVideo');
-    const handleScrollPlay = () => {
-      vid.play().catch(error => {
-        console.error('Autoplay was prevented:', error);
-      });
-      window.removeEventListener('scroll', handleScrollPlay);
+    window.addEventListener('scroll', handlePlay);
+    return () => {
+      window.removeEventListener('scroll', handlePlay);
     };
-    window.addEventListener('scroll', handleScrollPlay);
-
-  return () => {
-    window.removeEventListener('scroll', handleScrollPlay);
-  };
-}, []);
+  }, []);
   
   return (
     <div
