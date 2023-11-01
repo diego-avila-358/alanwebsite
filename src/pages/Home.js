@@ -42,6 +42,7 @@ function Home() {
           autoPlay
           loop
           muted={true}
+          playsInline
           controls={false}
           className='header-background'
           style={{
