@@ -6,6 +6,12 @@ import video from '../assets/background.mov';
 import '../components/styles.css';
 
 function Home() {
+  const handlePlay = () => {
+    const vid = document.getElementById('backgroundVideo');
+    vid.play().catch(error => {
+      console.error('Autoplay was prevented:', error);
+    });
+  };
   useEffect(() => {
     const vid = document.getElementById('backgroundVideo');
     const handleScrollPlay = () => {
@@ -15,10 +21,11 @@ function Home() {
       window.removeEventListener('scroll', handleScrollPlay);
     };
     window.addEventListener('scroll', handleScrollPlay);
-    return () => {
-      window.removeEventListener('scroll', handleScrollPlay);
-    };
-  }, []);
+
+  return () => {
+    window.removeEventListener('scroll', handleScrollPlay);
+  };
+}, []);
   
   return (
     <div
