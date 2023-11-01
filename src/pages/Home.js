@@ -26,7 +26,7 @@ function Home() {
           alt='Background'
           autoPlay
           loop
-          muted
+          muted={true}
           className='header-background'
           style={{
             width: '100%',
