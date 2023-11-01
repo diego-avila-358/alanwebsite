@@ -6,12 +6,18 @@ import video from '../assets/background.mov';
 import '../components/styles.css';
 
 function Home() {
+  const handlePlay = () => {
+  const vid = document.getElementById('backgroundVideo');
+    vid.play().catch(error => {
+      console.error('Autoplay was prevented:', error);
+    });
+  };
+  
   useEffect(() => {
-  document.getElementById('backgroundVideo').play().catch(error => {
-    // Autoplay was prevented, handle the situation.
-    // You might display a message or offer a button for manual play.
-    console.error('Autoplay was prevented:', error);
-  }); 
+    window.addEventListener('click', handlePlay);
+    return () => {
+      window.removeEventListener('click', handlePlay);
+    };
   }, []);
   
   return (
