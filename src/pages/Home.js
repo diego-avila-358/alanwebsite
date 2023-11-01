@@ -6,6 +6,14 @@ import video from '../assets/background.mov';
 import '../components/styles.css';
 
 function Home() {
+  useEffect(() => {
+  document.getElementById('backgroundVideo').play().catch(error => {
+    // Autoplay was prevented, handle the situation.
+    // You might display a message or offer a button for manual play.
+    console.error('Autoplay was prevented:', error);
+  }); 
+  }, []);
+  
   return (
     <div
       className='home-page'
@@ -22,6 +30,7 @@ function Home() {
         className='text-white position-relative overflow-hidden dark-filter-image'
         style={{ top: -150, zIndex: 1, minWidth: '1110px' }}>
         <video
+          id="backgroundVideo"
           src={video}
           alt='Background'
           autoPlay
