@@ -6,17 +6,17 @@ import video from '../assets/background.mov';
 import '../components/styles.css';
 
 function Home() {
-  const handlePlay = () => {
-  const vid = document.getElementById('backgroundVideo');
-    vid.play().catch(error => {
-      console.error('Autoplay was prevented:', error);
-    });
-  };
-  
   useEffect(() => {
-    window.addEventListener('click', handlePlay);
+    const vid = document.getElementById('backgroundVideo');
+    const handleScrollPlay = () => {
+      vid.play().catch(error => {
+        console.error('Autoplay was prevented:', error);
+      });
+      window.removeEventListener('scroll', handleScrollPlay);
+    };
+    window.addEventListener('scroll', handleScrollPlay);
     return () => {
-      window.removeEventListener('click', handlePlay);
+      window.removeEventListener('scroll', handleScrollPlay);
     };
   }, []);
   
